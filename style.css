@@ -51,10 +51,11 @@ a:hover {
 
 .site-title {
   color: #333;
-  font-size: 28px;
+  font-size: 25px;
   font-weight: 400;
   letter-spacing: 0.02em;
   white-space: nowrap;
+  text-transform: uppercase;
 }
 
 .site-title:hover {
@@ -72,11 +73,9 @@ a:hover {
 .site-navigation a {
   padding: 34px 0 29px;
   color: #777;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  border-bottom: 3px solid transparent;
+  font-size: 14px;
+  font-weight: 300;
+  border-bottom: 1px solid transparent;
 }
 
 .site-navigation a:hover,
@@ -116,12 +115,12 @@ a:hover {
 }
 
 .profile-column {
-  grid-column: 1;
+  grid-column: 2;
   min-width: 0;
 }
 
 .content-column {
-  grid-column: 2;
+  grid-column: 3;
   min-width: 0;
 }
 
@@ -146,7 +145,7 @@ a:hover {
   max-width: 360px;
   margin-top: 8px;
   color: #999;
-  font-size: 12px;
+  font-size: 14px;
   text-align: right;
 }
 
