@@ -7,7 +7,7 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 body {
@@ -15,7 +15,7 @@ body {
   color: #444;
   background-color: #fff;
   font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.65;
+  line-height: 1;
 }
 
 a {
@@ -147,8 +147,7 @@ a:hover {
   margin-top: 8px;
   color: #999;
   font-size: 12px;
-  font-style: italic;
-  text-align: center;
+  text-align: right;
 }
 
 
