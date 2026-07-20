@@ -1,4 +1,6 @@
-/* Impostazioni generali */
+/* =========================================================
+   IMPOSTAZIONI GENERALI
+   ========================================================= */
 
 * {
   box-sizing: border-box;
@@ -11,7 +13,7 @@ html {
 body {
   margin: 0;
   color: #444;
-  background: #ffffff;
+  background-color: #fff;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.65;
 }
@@ -26,17 +28,21 @@ a:hover {
 }
 
 
-/* Barra superiore */
+/* =========================================================
+   BARRA SUPERIORE
+   ========================================================= */
 
 .site-header {
+  width: 100%;
+  background-color: #fff;
   border-bottom: 1px solid #e5e5e5;
-  background: #ffffff;
 }
 
 .header-inner {
   width: min(1120px, calc(100% - 48px));
   min-height: 92px;
   margin: 0 auto;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -59,8 +65,8 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 28px;
   flex-wrap: wrap;
+  gap: 28px;
 }
 
 .site-navigation a {
@@ -81,31 +87,49 @@ a:hover {
 }
 
 
-/* Corpo della pagina */
+/* =========================================================
+   CORPO DELLA PAGINA
+   ========================================================= */
 
 .page {
   width: min(1120px, calc(100% - 48px));
   margin: 55px auto 80px;
+
   display: grid;
-  grid-template-columns: minmax(260px, 390px) minmax(0, 1fr);
-  gap: 75px;
+  grid-template-columns: 360px minmax(0, 1fr);
+  column-gap: 75px;
   align-items: start;
 }
 
+.profile-column {
+  grid-column: 1;
+  min-width: 0;
+}
 
-/* Fotografia */
+.content-column {
+  grid-column: 2;
+  min-width: 0;
+}
+
+
+/* =========================================================
+   FOTOGRAFIA
+   ========================================================= */
 
 .profile-photo {
+  width: 100%;
   margin: 0;
 }
 
 .profile-photo img {
   display: block;
   width: 100%;
+  max-width: 360px;
   height: auto;
 }
 
 .profile-photo figcaption {
+  max-width: 360px;
   margin-top: 8px;
   color: #999;
   font-size: 12px;
@@ -114,27 +138,28 @@ a:hover {
 }
 
 
-/* Contenuto */
-
-.content-column {
-  min-width: 0;
-}
+/* =========================================================
+   CONTENUTO
+   ========================================================= */
 
 .content-section {
-  padding: 0 0 30px;
   margin: 0 0 30px;
+  padding: 0 0 30px;
   border-bottom: 1px solid #e2e2e2;
 }
 
 .content-section:last-child {
+  margin-bottom: 0;
   border-bottom: 0;
 }
 
 .content-section h1,
 .content-section h2 {
-  margin: 0 0 16px;
+  margin-top: 0;
+  margin-bottom: 16px;
   color: #444;
   font-weight: 400;
+  line-height: 1.25;
 }
 
 .content-section h1 {
@@ -146,7 +171,8 @@ a:hover {
 }
 
 .content-section p {
-  margin: 0 0 12px;
+  margin-top: 0;
+  margin-bottom: 12px;
 }
 
 .role {
@@ -162,7 +188,9 @@ address {
 }
 
 
-/* Footer */
+/* =========================================================
+   FOOTER
+   ========================================================= */
 
 .site-footer {
   padding: 28px 24px;
@@ -177,9 +205,12 @@ address {
 }
 
 
-/* Smartphone e tablet */
+/* =========================================================
+   TABLET
+   Mantiene foto a sinistra e testo a destra
+   ========================================================= */
 
-@media (max-width: 850px) {
+@media (max-width: 900px) {
   .header-inner {
     padding: 24px 0;
     display: block;
@@ -200,20 +231,22 @@ address {
   }
 
   .page {
-    grid-template-columns: 1fr;
-    gap: 40px;
+    grid-template-columns: minmax(220px, 300px) minmax(0, 1fr);
+    column-gap: 40px;
     margin-top: 35px;
-  }
-
-  .profile-photo {
-    max-width: 520px;
   }
 }
 
-@media (max-width: 520px) {
+
+/* =========================================================
+   SMARTPHONE
+   Solo qui il testo passa sotto la foto
+   ========================================================= */
+
+@media (max-width: 650px) {
   .header-inner,
   .page {
-    width: min(100% - 30px, 1120px);
+    width: calc(100% - 30px);
   }
 
   .site-title {
@@ -223,6 +256,27 @@ address {
   .site-navigation {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 12px 20px;
+  }
+
+  .page {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+  }
+
+  .profile-column,
+  .content-column {
+    grid-column: 1;
+  }
+
+  .profile-photo {
+    max-width: 420px;
+  }
+
+  .profile-photo img,
+  .profile-photo figcaption {
+    max-width: 100%;
   }
 
   .content-section h1 {
