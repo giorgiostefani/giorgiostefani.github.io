@@ -224,11 +224,12 @@ address {
    Mantiene foto a sinistra e testo a destra
    ========================================================= */
 
-@media (max-width: 900px) {
-  .header-inner {
-    padding: 24px 0;
-    display: block;
+@media (max-width: 650px) {
+  .page-text {
+    width: calc(100% - 30px);
+    margin-top: 35px;
   }
+}
 
   .site-title {
     display: inline-block;
