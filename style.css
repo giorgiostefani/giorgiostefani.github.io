@@ -105,6 +105,15 @@ a:hover {
   align-items: start;
 }
 
+/* =========================================================
+   TEXT PAGES
+   ========================================================= */
+
+.page-text {
+  width: min(950px, calc(100% - 120px));
+  margin: 55px auto 80px;
+}
+
 .profile-column {
   grid-column: 1;
   min-width: 0;
